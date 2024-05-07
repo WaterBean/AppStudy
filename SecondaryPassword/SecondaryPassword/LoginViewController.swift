@@ -5,9 +5,6 @@ final class LoginViewController: UIViewController {
     let userID = "1"
     let userPWD = "1"
     
-
-    
-    
     // MARK: - 이메일 입력하는 텍스트 뷰
     private lazy var emailTextFieldView: UIView = {
         let view = UIView()

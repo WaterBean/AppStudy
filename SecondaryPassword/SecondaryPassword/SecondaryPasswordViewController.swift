@@ -51,6 +51,11 @@ class SecondaryPasswordViewController: UIViewController {
                     wrongCount += 1
                     inputPassword = ""
                     helpLabel.text = "다시 눌러주세요 (\(wrongCount)/5)"
+                    firstWordView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                    secondWordView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                    thirdWordView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                    fourthWordView.backgroundColor = #colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1)
+                    
                 }
             }
         }
