@@ -50,6 +50,8 @@ class MemberTableViewController: UITableViewController {
         let nick = cell.viewWithTag(1) as? UILabel
         let desc = cell.viewWithTag(2) as? UILabel
         
+        
+        
         profile?.image = UIImage(named: "몰라")
         nick?.text = member.nick
         desc?.text =  member.desc
@@ -97,8 +99,7 @@ class MemberTableViewController: UITableViewController {
     @IBAction func addMember(segue: UIStoryboardSegue) {
         self.navigationController?.popViewController(animated: true)
     }
-    
-    
+
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation

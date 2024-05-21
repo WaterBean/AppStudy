@@ -151,7 +151,7 @@
                                 <buttonConfiguration key="configuration" style="filled" title="멤버 추가하기"/>
                                 <connections>
                                     <action selector="addMemberAct:" destination="9gg-6Q-eJo" eventType="touchUpInside" id="GEa-JI-eex"/>
-                                    <segue destination="NYQ-mn-PUC" kind="unwind" unwindAction="addMemberWithSegue:" id="V6C-jC-HeF"/>
+                                    <segue destination="NYQ-mn-PUC" kind="unwind" unwindAction="addMemberWithSegue:" id="0Q0-tM-4OH"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BEk-dn-iXD">
