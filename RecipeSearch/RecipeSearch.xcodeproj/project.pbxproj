@@ -15,6 +15,10 @@
 		55885FC62C04CF760024FB30 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 55885FC52C04CF760024FB30 /* Base */; };
 		55885FCE2C04D2330024FB30 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FCD2C04D2330024FB30 /* MainTableViewController.swift */; };
 		55885FD02C04D59C0024FB30 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FCF2C04D59C0024FB30 /* RecipeModel.swift */; };
+		55C4C9162C05682900B6DF2F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 55C4C9152C05682900B6DF2F /* Alamofire */; };
+		55C4C9182C05682900B6DF2F /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 55C4C9172C05682900B6DF2F /* AlamofireDynamic */; };
+		55C4C91F2C057FE100B6DF2F /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4C91E2C057FE100B6DF2F /* RecipeManager.swift */; };
+		55C4C9252C05AB3800B6DF2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4C9242C05AB3700B6DF2F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,8 @@
 		55885FC72C04CF760024FB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		55885FCD2C04D2330024FB30 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		55885FCF2C04D59C0024FB30 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
+		55C4C91E2C057FE100B6DF2F /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
+		55C4C9242C05AB3700B6DF2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C4C9162C05682900B6DF2F /* Alamofire in Frameworks */,
+				55C4C9182C05682900B6DF2F /* AlamofireDynamic in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,15 +70,41 @@
 			children = (
 				55885FB92C04CF750024FB30 /* AppDelegate.swift */,
 				55885FBB2C04CF750024FB30 /* SceneDelegate.swift */,
-				55885FBD2C04CF750024FB30 /* ViewController.swift */,
-				55885FBF2C04CF750024FB30 /* Main.storyboard */,
-				55885FCF2C04D59C0024FB30 /* RecipeModel.swift */,
-				55885FCD2C04D2330024FB30 /* MainTableViewController.swift */,
+				55C4C91A2C056E7700B6DF2F /* Controllers */,
+				55C4C9192C056E6C00B6DF2F /* Views */,
+				55C4C91B2C056E8100B6DF2F /* Models */,
 				55885FC22C04CF760024FB30 /* Assets.xcassets */,
 				55885FC42C04CF760024FB30 /* LaunchScreen.storyboard */,
 				55885FC72C04CF760024FB30 /* Info.plist */,
 			);
 			path = RecipeSearch;
+			sourceTree = "<group>";
+		};
+		55C4C9192C056E6C00B6DF2F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				55885FBF2C04CF750024FB30 /* Main.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		55C4C91A2C056E7700B6DF2F /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				55885FBD2C04CF750024FB30 /* ViewController.swift */,
+				55885FCD2C04D2330024FB30 /* MainTableViewController.swift */,
+				55C4C9242C05AB3700B6DF2F /* MainViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		55C4C91B2C056E8100B6DF2F /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				55885FCF2C04D59C0024FB30 /* RecipeModel.swift */,
+				55C4C91E2C057FE100B6DF2F /* RecipeManager.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,6 +123,10 @@
 			dependencies = (
 			);
 			name = RecipeSearch;
+			packageProductDependencies = (
+				55C4C9152C05682900B6DF2F /* Alamofire */,
+				55C4C9172C05682900B6DF2F /* AlamofireDynamic */,
+			);
 			productName = RecipeSearch;
 			productReference = 55885FB62C04CF750024FB30 /* RecipeSearch.app */;
 			productType = "com.apple.product-type.application";
@@ -117,6 +155,9 @@
 				Base,
 			);
 			mainGroup = 55885FAD2C04CF750024FB30;
+			packageReferences = (
+				55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */,
+			);
 			productRefGroup = 55885FB72C04CF750024FB30 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -144,9 +185,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55C4C9252C05AB3800B6DF2F /* MainViewController.swift in Sources */,
 				55885FCE2C04D2330024FB30 /* MainTableViewController.swift in Sources */,
 				55885FBE2C04CF750024FB30 /* ViewController.swift in Sources */,
 				55885FD02C04D59C0024FB30 /* RecipeModel.swift in Sources */,
+				55C4C91F2C057FE100B6DF2F /* RecipeManager.swift in Sources */,
 				55885FBA2C04CF750024FB30 /* AppDelegate.swift in Sources */,
 				55885FBC2C04CF750024FB30 /* SceneDelegate.swift in Sources */,
 			);
@@ -226,7 +269,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -283,7 +326,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -298,8 +341,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -307,6 +351,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -314,9 +359,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.subeen.RecipeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -325,8 +375,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecipeSearch/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -334,6 +385,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -341,9 +393,14 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = org.kibwa.subeen.RecipeSearch;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -357,7 +414,7 @@
 				55885FC92C04CF760024FB30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		55885FCA2C04CF760024FB30 /* Build configuration list for PBXNativeTarget "RecipeSearch" */ = {
 			isa = XCConfigurationList;
@@ -366,9 +423,33 @@
 				55885FCC2C04CF760024FB30 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		55C4C9152C05682900B6DF2F /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		55C4C9172C05682900B6DF2F /* AlamofireDynamic */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = AlamofireDynamic;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 55885FAE2C04CF750024FB30 /* Project object */;
 }
