@@ -6,20 +6,10 @@
 //
 
 import UIKit
+import Kingfisher
 
 class MainViewController: UIViewController {
     
-    let images: [UIImage] = [
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!,
-        UIImage(systemName: "1.circle")!
-    ]
     
     
     let recipeManager = RecipeManager()
@@ -41,15 +31,17 @@ class MainViewController: UIViewController {
     }
     
     
-    /*
+    
      // MARK: - Navigation
      
      // In a storyboard-based application, you will often want to do a little preparation before navigation
      override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
      // Get the new view controller using segue.destination.
      // Pass the selected object to the new view controller.
+         
+         
      }
-     */
+     
     
 }
 
@@ -87,35 +79,41 @@ extension MainViewController: UITableViewDataSource {
     }
     
 }
+
 extension MainViewController: UITableViewDelegate {
     
 }
 
 extension MainViewController: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        recipeManager.search()
+        recipeManager.search(query: searchText)
+        searchCollectionView.reloadData()
     }
     
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
-        
+        searchBar.text = ""
+        //print(recipeManager.root?.recipes.row[0]["ATT_FILE_NO_MAIN"])
     }
 }
 
 extension MainViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        print(indexPath.item)
+        print(recipeManager.root?.recipes.row[indexPath.item])
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ImageCell", for: indexPath) as! ImageCell
-        cell.imageView.image = self.images[indexPath.item]
+        guard let image = recipeManager.root?.recipes.row[indexPath.item]["ATT_FILE_NO_MAIN"] else { return cell }
+        cell.imageView.kf.setImage(with: URL(string: image)!)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return 11//recipeManager.root?.recipes.row.count ?? 0
     }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let width = (collectionView.frame.width - 20) / 3
+        let width = collectionView.frame.width / 3
         return CGSize(width: width, height: width)
 
     }

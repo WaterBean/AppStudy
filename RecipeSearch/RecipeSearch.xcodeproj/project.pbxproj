@@ -9,14 +9,13 @@
 /* Begin PBXBuildFile section */
 		55885FBA2C04CF750024FB30 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FB92C04CF750024FB30 /* AppDelegate.swift */; };
 		55885FBC2C04CF750024FB30 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FBB2C04CF750024FB30 /* SceneDelegate.swift */; };
-		55885FBE2C04CF750024FB30 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FBD2C04CF750024FB30 /* ViewController.swift */; };
+		55885FBE2C04CF750024FB30 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FBD2C04CF750024FB30 /* DetailViewController.swift */; };
 		55885FC12C04CF750024FB30 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 55885FC02C04CF750024FB30 /* Base */; };
 		55885FC32C04CF760024FB30 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 55885FC22C04CF760024FB30 /* Assets.xcassets */; };
 		55885FC62C04CF760024FB30 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 55885FC52C04CF760024FB30 /* Base */; };
-		55885FCE2C04D2330024FB30 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FCD2C04D2330024FB30 /* MainTableViewController.swift */; };
 		55885FD02C04D59C0024FB30 /* RecipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55885FCF2C04D59C0024FB30 /* RecipeModel.swift */; };
-		55C4C9162C05682900B6DF2F /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 55C4C9152C05682900B6DF2F /* Alamofire */; };
-		55C4C9182C05682900B6DF2F /* AlamofireDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 55C4C9172C05682900B6DF2F /* AlamofireDynamic */; };
+		55885FD42C05F3160024FB30 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 55885FD32C05F3160024FB30 /* Alamofire */; };
+		55885FD72C05FA150024FB30 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 55885FD62C05FA150024FB30 /* Kingfisher */; };
 		55C4C91F2C057FE100B6DF2F /* RecipeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4C91E2C057FE100B6DF2F /* RecipeManager.swift */; };
 		55C4C9252C05AB3800B6DF2F /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55C4C9242C05AB3700B6DF2F /* MainViewController.swift */; };
 /* End PBXBuildFile section */
@@ -25,12 +24,11 @@
 		55885FB62C04CF750024FB30 /* RecipeSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecipeSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55885FB92C04CF750024FB30 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55885FBB2C04CF750024FB30 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		55885FBD2C04CF750024FB30 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		55885FBD2C04CF750024FB30 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		55885FC02C04CF750024FB30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		55885FC22C04CF760024FB30 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		55885FC52C04CF760024FB30 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		55885FC72C04CF760024FB30 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		55885FCD2C04D2330024FB30 /* MainTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
 		55885FCF2C04D59C0024FB30 /* RecipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeModel.swift; sourceTree = "<group>"; };
 		55C4C91E2C057FE100B6DF2F /* RecipeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeManager.swift; sourceTree = "<group>"; };
 		55C4C9242C05AB3700B6DF2F /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -41,8 +39,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55C4C9162C05682900B6DF2F /* Alamofire in Frameworks */,
-				55C4C9182C05682900B6DF2F /* AlamofireDynamic in Frameworks */,
+				55885FD72C05FA150024FB30 /* Kingfisher in Frameworks */,
+				55885FD42C05F3160024FB30 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,8 +89,7 @@
 		55C4C91A2C056E7700B6DF2F /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				55885FBD2C04CF750024FB30 /* ViewController.swift */,
-				55885FCD2C04D2330024FB30 /* MainTableViewController.swift */,
+				55885FBD2C04CF750024FB30 /* DetailViewController.swift */,
 				55C4C9242C05AB3700B6DF2F /* MainViewController.swift */,
 			);
 			path = Controllers;
@@ -124,8 +121,8 @@
 			);
 			name = RecipeSearch;
 			packageProductDependencies = (
-				55C4C9152C05682900B6DF2F /* Alamofire */,
-				55C4C9172C05682900B6DF2F /* AlamofireDynamic */,
+				55885FD32C05F3160024FB30 /* Alamofire */,
+				55885FD62C05FA150024FB30 /* Kingfisher */,
 			);
 			productName = RecipeSearch;
 			productReference = 55885FB62C04CF750024FB30 /* RecipeSearch.app */;
@@ -157,6 +154,7 @@
 			mainGroup = 55885FAD2C04CF750024FB30;
 			packageReferences = (
 				55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */,
+				55885FD52C05FA150024FB30 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 55885FB72C04CF750024FB30 /* Products */;
 			projectDirPath = "";
@@ -186,8 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				55C4C9252C05AB3800B6DF2F /* MainViewController.swift in Sources */,
-				55885FCE2C04D2330024FB30 /* MainTableViewController.swift in Sources */,
-				55885FBE2C04CF750024FB30 /* ViewController.swift in Sources */,
+				55885FBE2C04CF750024FB30 /* DetailViewController.swift in Sources */,
 				55885FD02C04D59C0024FB30 /* RecipeModel.swift in Sources */,
 				55C4C91F2C057FE100B6DF2F /* RecipeManager.swift in Sources */,
 				55885FBA2C04CF750024FB30 /* AppDelegate.swift in Sources */,
@@ -428,6 +425,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		55885FD52C05FA150024FB30 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.11.0;
+			};
+		};
 		55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -439,15 +444,14 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		55C4C9152C05682900B6DF2F /* Alamofire */ = {
+		55885FD32C05F3160024FB30 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		55C4C9172C05682900B6DF2F /* AlamofireDynamic */ = {
+		55885FD62C05FA150024FB30 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 55C4C9142C05682900B6DF2F /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = AlamofireDynamic;
+			package = 55885FD52C05FA150024FB30 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
